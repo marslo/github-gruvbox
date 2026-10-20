@@ -2,51 +2,66 @@
 @name           Github GruvBox
 @namespace      github.com
 @version        3.0.0
-@description    A GruvBox theme for GitHub.
+@description    A GruvBox ( gruvbox-material hard dark ) theme for GitHub.
 @author         Sam McGowan
+@maintainer     Marslo Jiao
+@homepageURL    https://github.com/marslo/github-gruvbox
+@updateURL      https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox.user.css
 ==/UserStyle== */
 
 @-moz-document domain("github.com") {
 
-    /* GruvBox colours */
+    /*
+     * gruvbox-material colours: background `hard`, `dark` mode, foreground `material`
+     * source: https://github.com/sainnhe/gruvbox-material/blob/master/autoload/gruvbox_material.vim
+     */
     :root {
-        --gruv-bg0_h: #1d2021;
-        --gruv-bg0_s: #32302f;
+        --gruv-bg0_h: #141617;                  /* bg_dim */
+        --gruv-bg0_s: #282828;                  /* bg1 / bg2 */
 
-        --gruv-bg0: #282828;
-        --gruv-bg1: #3c3836;
-        --gruv-bg2: #504945;
-        --gruv-bg3: #665c54;
-        --gruv-bg4: #7c6f64;
+        --gruv-bg0: #1d2021;                    /* bg0 */
+        --gruv-bg1: #3c3836;                    /* bg3 / bg4 */
+        --gruv-bg2: #504945;                    /* bg5 */
+        --gruv-bg3: #665c54;                    /* between bg5 and grey0 */
+        --gruv-bg4: #7c6f64;                    /* grey0 */
 
-        --gruv-fg0: #fbf1c7;
-        --gruv-fg1: #ebdbb2;
-        --gruv-fg2: #d5c4a1;
-        --gruv-fg3: #bdae93;
-        --gruv-fg4: #a89984;
+        --gruv-fg0: #ddc7a1;                    /* fg1 */
+        --gruv-fg1: #d4be98;                    /* fg0 */
+        --gruv-fg2: #d4be98;                    /* fg0 */
+        --gruv-fg3: #a89984;                    /* grey2 */
+        --gruv-fg4: #a89984;                    /* grey2 */
 
-        --gruv-gray: #928374;
+        --gruv-gray: #928374;                   /* grey1 */
 
-        --gruv-red-light: #fb4934;
-        --gruv-red-dark: #cc241d;
+        /* diff / visual backgrounds */
+        --gruv-bg-diff-red: #3c1f1e;            /* bg_diff_red */
+        --gruv-bg-diff-green: #32361a;          /* bg_diff_green */
+        --gruv-bg-diff-blue: #0d3138;           /* bg_diff_blue */
+        --gruv-bg-visual-red: #442e2d;          /* bg_visual_red */
+        --gruv-bg-visual-green: #333e34;        /* bg_visual_green */
+        --gruv-bg-visual-blue: #2e3b3b;         /* bg_visual_blue */
 
-        --gruv-orange-light: #fe8019;
-        --gruv-orange-dark: #d65d0e;
+        /* `-light` = palette hue; `-dark` = hue mixed 80% with bg0 */
+        --gruv-red-light: #ea6962;
+        --gruv-red-dark: color-mix(in srgb, var(--gruv-red-light) 80%, var(--gruv-bg0));
 
-        --gruv-yellow-light: #fabd2f;
-        --gruv-yellow-dark: #d79921;
+        --gruv-orange-light: #e78a4e;
+        --gruv-orange-dark: color-mix(in srgb, var(--gruv-orange-light) 80%, var(--gruv-bg0));
 
-        --gruv-green-light: #b8bb26;
-        --gruv-green-dark: #98971a;
+        --gruv-yellow-light: #d8a657;
+        --gruv-yellow-dark: color-mix(in srgb, var(--gruv-yellow-light) 80%, var(--gruv-bg0));
 
-        --gruv-aqua-light: #8ec07c;
-        --gruv-aqua-dark: #689d6a;
+        --gruv-green-light: #a9b665;
+        --gruv-green-dark: color-mix(in srgb, var(--gruv-green-light) 80%, var(--gruv-bg0));
 
-        --gruv-blue-light: #83a598;
-        --gruv-blue-dark: #458588;
+        --gruv-aqua-light: #89b482;
+        --gruv-aqua-dark: color-mix(in srgb, var(--gruv-aqua-light) 80%, var(--gruv-bg0));
+
+        --gruv-blue-light: #7daea3;
+        --gruv-blue-dark: color-mix(in srgb, var(--gruv-blue-light) 80%, var(--gruv-bg0));
 
         --gruv-purple-light: #d3869b;
-        --gruv-purple-dark: #b16286;
+        --gruv-purple-dark: color-mix(in srgb, var(--gruv-purple-light) 80%, var(--gruv-bg0));
     }
 
     /* General */
@@ -70,29 +85,29 @@
         --bgColor-disabled: var(--gruv-bg1);
         --bgColor-black: var(--gruv-bg0_h);
         --bgColor-white: var(--gruv-fg0);
-        --bgColor-neutral-muted: rgba(146, 131, 116, 0.2);
+        --bgColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --bgColor-neutral-emphasis: var(--gruv-gray);
-        --bgColor-accent-muted: rgba(131, 165, 152, 0.15);
+        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 15%, transparent);
         --bgColor-accent-emphasis: var(--gruv-bg4);
-        --bgColor-success-muted: rgba(184, 187, 38, 0.15);
+        --bgColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
         --bgColor-success-emphasis: var(--gruv-green-dark);
-        --bgColor-open-muted: rgba(184, 187, 38, 0.15);
+        --bgColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
         --bgColor-open-emphasis: var(--gruv-green-dark);
-        --bgColor-attention-muted: rgba(250, 189, 47, 0.15);
+        --bgColor-attention-muted: color-mix(in srgb, var(--gruv-yellow-light) 15%, transparent);
         --bgColor-attention-emphasis: var(--gruv-yellow-dark);
-        --bgColor-severe-muted: rgba(254, 128, 25, 0.15);
+        --bgColor-severe-muted: color-mix(in srgb, var(--gruv-orange-light) 15%, transparent);
         --bgColor-severe-emphasis: var(--gruv-orange-dark);
-        --bgColor-danger-muted: rgba(251, 73, 52, 0.15);
+        --bgColor-danger-muted: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
         --bgColor-danger-emphasis: var(--gruv-red-dark);
-        --bgColor-closed-muted: rgba(251, 73, 52, 0.15);
+        --bgColor-closed-muted: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
         --bgColor-closed-emphasis: var(--gruv-red-dark);
-        --bgColor-done-muted: rgba(211, 134, 155, 0.15);
+        --bgColor-done-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
         --bgColor-done-emphasis: var(--gruv-purple-dark);
-        --bgColor-sponsors-muted: rgba(211, 134, 155, 0.15);
+        --bgColor-sponsors-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
         --bgColor-sponsors-emphasis: var(--gruv-purple-dark);
-        --bgColor-upsell-muted: rgba(211, 134, 155, 0.15);
+        --bgColor-upsell-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
         --bgColor-upsell-emphasis: var(--gruv-purple-dark);
-        --bgColor-draft-muted: rgba(146, 131, 116, 0.2);
+        --bgColor-draft-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --bgColor-draft-emphasis: var(--gruv-gray);
 
         /* foreground */
@@ -122,30 +137,30 @@
         --borderColor-muted: var(--gruv-bg0_s);
         --borderColor-emphasis: var(--gruv-bg3);
         --borderColor-disabled: var(--gruv-bg1);
-        --borderColor-translucent: rgba(146, 131, 116, 0.2);
-        --borderColor-neutral-muted: rgba(146, 131, 116, 0.3);
+        --borderColor-translucent: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --borderColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 30%, transparent);
         --borderColor-neutral-emphasis: var(--gruv-gray);
-        --borderColor-accent-muted: rgba(131, 165, 152, 0.4);
+        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 40%, transparent);
         --borderColor-accent-emphasis: var(--gruv-blue-light);
-        --borderColor-success-muted: rgba(184, 187, 38, 0.4);
+        --borderColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
         --borderColor-success-emphasis: var(--gruv-green-dark);
-        --borderColor-open-muted: rgba(184, 187, 38, 0.4);
+        --borderColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
         --borderColor-open-emphasis: var(--gruv-green-dark);
-        --borderColor-attention-muted: rgba(250, 189, 47, 0.4);
+        --borderColor-attention-muted: color-mix(in srgb, var(--gruv-yellow-light) 40%, transparent);
         --borderColor-attention-emphasis: var(--gruv-yellow-dark);
-        --borderColor-severe-muted: rgba(254, 128, 25, 0.4);
+        --borderColor-severe-muted: color-mix(in srgb, var(--gruv-orange-light) 40%, transparent);
         --borderColor-severe-emphasis: var(--gruv-orange-dark);
-        --borderColor-danger-muted: rgba(251, 73, 52, 0.4);
+        --borderColor-danger-muted: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
         --borderColor-danger-emphasis: var(--gruv-red-dark);
-        --borderColor-closed-muted: rgba(251, 73, 52, 0.4);
+        --borderColor-closed-muted: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
         --borderColor-closed-emphasis: var(--gruv-red-dark);
-        --borderColor-done-muted: rgba(211, 134, 155, 0.4);
+        --borderColor-done-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
         --borderColor-done-emphasis: var(--gruv-purple-dark);
-        --borderColor-sponsors-muted: rgba(211, 134, 155, 0.4);
+        --borderColor-sponsors-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
         --borderColor-sponsors-emphasis: var(--gruv-purple-dark);
-        --borderColor-upsell-muted: rgba(211, 134, 155, 0.4);
+        --borderColor-upsell-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
         --borderColor-upsell-emphasis: var(--gruv-purple-dark);
-        --borderColor-draft-muted: rgba(146, 131, 116, 0.4);
+        --borderColor-draft-muted: color-mix(in srgb, var(--gruv-gray) 40%, transparent);
         --borderColor-draft-emphasis: var(--gruv-gray);
 
         /* focus */
@@ -164,7 +179,7 @@
         /* overlay / menu */
         --overlay-bgColor: var(--gruv-bg0_s);
         --overlay-borderColor: var(--gruv-bg2);
-        --overlay-backdrop-bgColor: rgba(29, 32, 33, 0.6);
+        --overlay-backdrop-bgColor: color-mix(in srgb, var(--gruv-bg0_h) 60%, transparent);
         --selectMenu-bgColor-active: var(--gruv-bg2);
         --selectMenu-borderColor: var(--gruv-bg1);
         --sideNav-bgColor-selected: var(--gruv-bg1);
@@ -192,9 +207,9 @@
         --control-fgColor-placeholder: var(--gruv-gray);
         --control-fgColor-disabled: var(--gruv-gray);
         --control-iconColor-rest: var(--gruv-fg4);
-        --control-transparent-bgColor-hover: rgba(146, 131, 116, 0.15);
-        --control-transparent-bgColor-active: rgba(146, 131, 116, 0.2);
-        --control-transparent-bgColor-selected: rgba(146, 131, 116, 0.2);
+        --control-transparent-bgColor-hover: color-mix(in srgb, var(--gruv-gray) 15%, transparent);
+        --control-transparent-bgColor-active: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --control-transparent-bgColor-selected: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --control-checked-bgColor-rest: var(--gruv-purple-dark);
         --control-checked-bgColor-hover: var(--gruv-purple-light);
         --control-checked-bgColor-active: var(--gruv-purple-dark);
@@ -228,7 +243,7 @@
         --button-primary-bgColor-rest: var(--gruv-purple-dark);
         --button-primary-bgColor-hover: var(--gruv-purple-light);
         --button-primary-bgColor-active: var(--gruv-purple-dark);
-        --button-primary-bgColor-disabled: rgba(177, 98, 134, 0.5);
+        --button-primary-bgColor-disabled: color-mix(in srgb, var(--gruv-purple-dark) 50%, transparent);
         --button-primary-borderColor-rest: var(--gruv-purple-dark);
         --button-primary-borderColor-hover: var(--gruv-purple-light);
         --button-primary-borderColor-active: var(--gruv-purple-dark);
@@ -262,8 +277,8 @@
         --button-invisible-fgColor-hover: var(--gruv-fg1);
         --button-invisible-iconColor-rest: var(--gruv-fg4);
         --button-invisible-iconColor-hover: var(--gruv-fg2);
-        --button-invisible-bgColor-hover: rgba(146, 131, 116, 0.15);
-        --button-invisible-bgColor-active: rgba(146, 131, 116, 0.2);
+        --button-invisible-bgColor-hover: color-mix(in srgb, var(--gruv-gray) 15%, transparent);
+        --button-invisible-bgColor-active: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
 
         --button-star-iconColor: var(--gruv-yellow-light);
         --buttonCounter-default-bgColor-rest: var(--gruv-bg0_s);
@@ -272,21 +287,21 @@
         --counter-borderColor: transparent;
 
         /* diff */
-        --diffBlob-additionLine-bgColor: rgba(184, 187, 38, 0.12);
+        --diffBlob-additionLine-bgColor: var(--gruv-bg-diff-green);
         --diffBlob-additionLine-fgColor: var(--gruv-fg1);
-        --diffBlob-additionNum-bgColor: rgba(184, 187, 38, 0.25);
+        --diffBlob-additionNum-bgColor: var(--gruv-bg-visual-green);
         --diffBlob-additionNum-fgColor: var(--gruv-fg1);
-        --diffBlob-additionWord-bgColor: rgba(184, 187, 38, 0.4);
+        --diffBlob-additionWord-bgColor: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
         --diffBlob-additionWord-fgColor: var(--gruv-fg0);
-        --diffBlob-deletionLine-bgColor: rgba(251, 73, 52, 0.12);
+        --diffBlob-deletionLine-bgColor: var(--gruv-bg-diff-red);
         --diffBlob-deletionLine-fgColor: var(--gruv-fg1);
-        --diffBlob-deletionNum-bgColor: rgba(251, 73, 52, 0.25);
+        --diffBlob-deletionNum-bgColor: var(--gruv-bg-visual-red);
         --diffBlob-deletionNum-fgColor: var(--gruv-fg1);
-        --diffBlob-deletionWord-bgColor: rgba(251, 73, 52, 0.4);
+        --diffBlob-deletionWord-bgColor: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
         --diffBlob-deletionWord-fgColor: var(--gruv-fg0);
-        --diffBlob-hunkLine-bgColor: rgba(131, 165, 152, 0.12);
+        --diffBlob-hunkLine-bgColor: var(--gruv-bg-diff-blue);
         --diffBlob-hunkLine-fgColor: var(--gruv-fg4);
-        --diffBlob-hunkNum-bgColor-rest: rgba(131, 165, 152, 0.25);
+        --diffBlob-hunkNum-bgColor-rest: var(--gruv-bg-visual-blue);
         --diffBlob-hunkNum-bgColor-hover: var(--gruv-blue-dark);
         --diffBlob-hunkNum-fgColor-rest: var(--gruv-fg2);
         --diffBlob-hunkNum-fgColor-hover: var(--gruv-fg0);
@@ -296,9 +311,9 @@
 
         /* contribution graph */
         --contribution-default-bgColor-0: var(--gruv-bg1);
-        --contribution-default-bgColor-1: rgba(184, 187, 38, 0.3);
-        --contribution-default-bgColor-2: rgba(184, 187, 38, 0.55);
-        --contribution-default-bgColor-3: rgba(184, 187, 38, 0.8);
+        --contribution-default-bgColor-1: color-mix(in srgb, var(--gruv-green-light) 30%, transparent);
+        --contribution-default-bgColor-2: color-mix(in srgb, var(--gruv-green-light) 55%, transparent);
+        --contribution-default-bgColor-3: color-mix(in srgb, var(--gruv-green-light) 80%, transparent);
         --contribution-default-bgColor-4: var(--gruv-green-light);
         --contribution-default-borderColor-0: transparent;
 
@@ -323,11 +338,11 @@
         --color-prettylights-syntax-markup-italic: var(--gruv-fg2);
         --color-prettylights-syntax-markup-bold: var(--gruv-purple-light);
         --color-prettylights-syntax-markup-deleted-text: var(--gruv-red-light);
-        --color-prettylights-syntax-markup-deleted-bg: rgba(251, 73, 52, 0.15);
+        --color-prettylights-syntax-markup-deleted-bg: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
         --color-prettylights-syntax-markup-inserted-text: var(--gruv-green-light);
-        --color-prettylights-syntax-markup-inserted-bg: rgba(184, 187, 38, 0.15);
+        --color-prettylights-syntax-markup-inserted-bg: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
         --color-prettylights-syntax-markup-changed-text: var(--gruv-orange-light);
-        --color-prettylights-syntax-markup-changed-bg: rgba(254, 128, 25, 0.15);
+        --color-prettylights-syntax-markup-changed-bg: color-mix(in srgb, var(--gruv-orange-light) 15%, transparent);
         --color-prettylights-syntax-markup-ignored-text: var(--gruv-fg2);
         --color-prettylights-syntax-markup-ignored-bg: var(--gruv-blue-dark);
         --color-prettylights-syntax-meta-diff-range: var(--gruv-purple-light);

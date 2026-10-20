@@ -12,7 +12,6 @@
   - keep legacy `--color-*` tokens on `body` as fallback and fix undefined `--gruv-bg` reference
   - add semantic-release config, pre-commit hooks, stylelint/typos configs and pre-commit CI workflow
   - add `CHANGELOG.md` with the `2.0.0` release entry
-  BREAKING CHANGE: migrate gruvbox to GitHub's new primer tokens and adopt semantic-release tooling
 
 ## 2.0.0 (2025-05-13)
 
