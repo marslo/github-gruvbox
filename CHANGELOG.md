@@ -1,3 +1,14 @@
+## [3.1.0](https://github.com/marslo/github-gruvbox/compare/v3.0.0...v3.1.0) (2026-10-20)
+
+### Features
+
+* **theme**, **release**: adopt gruvbox-material hard dark palette ([f146b79](https://github.com/marslo/github-gruvbox/commit/f146b792006184e89db5d98c7164bf1fd7a91685))
+  - remap `--gruv-*` palette to gruvbox-material hard dark with material foreground
+  - derive `-dark` variants and translucent tokens via `color-mix()` on palette vars
+  - use gruvbox-material `bg_diff_*` / `bg_visual_*` colors for diff lines and line numbers
+  - add `@maintainer`, `@homepageURL` and `@updateURL` userstyle metadata
+  - drop `BREAKING CHANGE` footer lines from release-note bodies and the `3.0.0` changelog entry
+
 ## [3.0.0](https://github.com/marslo/github-gruvbox/compare/v2.0.0...v3.0.0) (2026-10-20)
 
 ### ⚠ BREAKING CHANGE
