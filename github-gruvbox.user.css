@@ -87,7 +87,7 @@
         --bgColor-white: var(--gruv-fg0);
         --bgColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --bgColor-neutral-emphasis: var(--gruv-gray);
-        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 15%, transparent);
+        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 12%, transparent);
         --bgColor-accent-emphasis: var(--gruv-bg4);
         --bgColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
         --bgColor-success-emphasis: var(--gruv-green-dark);
@@ -112,15 +112,15 @@
 
         /* foreground */
         --fgColor-default: var(--gruv-fg1);
-        --fgColor-muted: var(--gruv-blue-light);
+        --fgColor-muted: var(--gruv-fg4);
         --fgColor-disabled: var(--gruv-gray);
         --fgColor-onEmphasis: var(--gruv-bg0_h);
         --fgColor-onInverse: var(--gruv-bg0);
         --fgColor-white: var(--gruv-fg0);
         --fgColor-black: var(--gruv-bg0_h);
         --fgColor-neutral: var(--gruv-fg4);
-        --fgColor-accent: var(--gruv-green-dark);
-        --fgColor-link: var(--gruv-green-dark);
+        --fgColor-accent: var(--gruv-aqua-light);
+        --fgColor-link: var(--gruv-aqua-light);
         --fgColor-success: var(--gruv-green-light);
         --fgColor-open: var(--gruv-green-light);
         --fgColor-attention: var(--gruv-yellow-light);
@@ -140,8 +140,8 @@
         --borderColor-translucent: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --borderColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 30%, transparent);
         --borderColor-neutral-emphasis: var(--gruv-gray);
-        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 40%, transparent);
-        --borderColor-accent-emphasis: var(--gruv-blue-light);
+        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 40%, transparent);
+        --borderColor-accent-emphasis: var(--gruv-aqua-dark);
         --borderColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
         --borderColor-success-emphasis: var(--gruv-green-dark);
         --borderColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
@@ -379,7 +379,7 @@
         --color-canvas-subtle: var(--gruv-bg0_s);
 
         --color-fg-default: var(--gruv-fg1);
-        --color-fg-muted: var(--gruv-blue-light);
+        --color-fg-muted: var(--gruv-fg4);
         --color-fg-subtle: var(--gruv-aqua-dark);
         --color-primer-fg-disabled: var(--gruv-gray);
 
@@ -411,7 +411,7 @@
         --color-btn-primary-focus-bg: var(--gruv-purple-dark);
         --color-btn-primary-selected-bg: var(--gruv-purple-dark);
 
-        --color-accent-fg: var(--gruv-green-dark);
+        --color-accent-fg: var(--gruv-aqua-light);
         --color-accent-emphasis: var(--gruv-red-light);
         --color-accent-subtle: var(--gruv-bg0_s);
         --color-fg-on-emphasis: var(--gruv-bg0_h);
@@ -450,6 +450,10 @@
 
     .Link--secondary:hover {
         color: var(--gruv-blue-dark) !important;
+    }
+
+    .Link--muted:hover {
+        color: var(--gruv-aqua-light) !important;
     }
 
     .feature-preview-indicator {
