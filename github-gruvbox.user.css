@@ -238,6 +238,26 @@
         --controlTrack-bgColor-rest: var(--gruv-bg1);
         --controlTrack-bgColor-hover: var(--gruv-bg2);
         --controlTrack-borderColor-rest: var(--gruv-bg2);
+        --control-checked-bgColor-disabled: var(--gruv-bg2);
+        --control-checked-borderColor-disabled: var(--gruv-bg2);
+        --control-checked-fgColor-disabled: var(--gruv-bg0);
+        --control-danger-fgColor-rest: var(--gruv-red-light);
+        --control-danger-fgColor-hover: var(--gruv-red-light);
+        --control-danger-bgColor-hover: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
+        --control-danger-bgColor-active: color-mix(in srgb, var(--gruv-red-light) 20%, transparent);
+        --control-transparent-bgColor-rest: transparent;
+        --control-transparent-bgColor-disabled: transparent;
+        --control-transparent-borderColor-rest: transparent;
+        --control-transparent-borderColor-hover: transparent;
+        --control-transparent-borderColor-active: transparent;
+        --controlKnob-bgColor-checked: var(--gruv-bg0);
+        --controlKnob-bgColor-disabled: var(--gruv-bg1);
+        --controlKnob-borderColor-disabled: var(--gruv-bg2);
+        --controlTrack-bgColor-active: var(--gruv-bg2);
+        --controlTrack-bgColor-disabled: var(--gruv-bg1);
+        --controlTrack-borderColor-disabled: var(--gruv-bg1);
+        --controlTrack-fgColor-rest: var(--gruv-fg4);
+        --controlTrack-fgColor-disabled: var(--gruv-gray);
 
         /* button: default */
         --button-default-fgColor-rest: var(--gruv-fg2);
@@ -301,6 +321,79 @@
         --counter-bgColor-emphasis: var(--gruv-gray);
         --counter-borderColor: transparent;
 
+        /* button: inactive / disabled */
+        --button-inactive-bgColor: var(--gruv-bg0_s);
+        --button-inactive-fgColor: var(--gruv-fg4);
+        --button-default-fgColor-disabled: var(--gruv-gray);
+        --button-primary-fgColor-disabled: color-mix(in srgb, var(--gruv-on-color) 60%, transparent);
+        --button-primary-iconColor-disabled: color-mix(in srgb, var(--gruv-on-color) 60%, transparent);
+        --button-danger-bgColor-disabled: var(--gruv-bg0_s);
+        --button-danger-fgColor-disabled: color-mix(in srgb, var(--gruv-red-light) 50%, transparent);
+        --button-danger-iconColor-disabled: color-mix(in srgb, var(--gruv-red-light) 50%, transparent);
+        --button-outline-bgColor-disabled: var(--gruv-bg0_s);
+        --button-outline-fgColor-disabled: color-mix(in srgb, var(--gruv-green-dark) 50%, transparent);
+        --button-invisible-bgColor-rest: transparent;
+        --button-invisible-bgColor-disabled: transparent;
+        --button-invisible-borderColor-rest: transparent;
+        --button-invisible-borderColor-hover: transparent;
+        --button-invisible-borderColor-disabled: transparent;
+        --button-invisible-fgColor-active: var(--gruv-fg1);
+        --button-invisible-fgColor-disabled: var(--gruv-gray);
+        --button-invisible-iconColor-disabled: var(--gruv-gray);
+
+        /* button counters */
+        --buttonCounter-invisible-bgColor-rest: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --buttonCounter-primary-bgColor-rest: color-mix(in srgb, var(--gruv-on-color) 20%, transparent);
+        --buttonCounter-outline-bgColor-rest: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
+        --buttonCounter-outline-bgColor-hover: color-mix(in srgb, var(--gruv-green-light) 25%, transparent);
+        --buttonCounter-outline-bgColor-disabled: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --buttonCounter-outline-fgColor-rest: var(--gruv-green-dark);
+        --buttonCounter-outline-fgColor-hover: var(--gruv-green-light);
+        --buttonCounter-outline-fgColor-disabled: var(--gruv-gray);
+        --buttonCounter-danger-bgColor-rest: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
+        --buttonCounter-danger-bgColor-hover: color-mix(in srgb, var(--gruv-on-color) 20%, transparent);
+        --buttonCounter-danger-bgColor-disabled: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --buttonCounter-danger-fgColor-rest: var(--gruv-red-light);
+        --buttonCounter-danger-fgColor-hover: var(--gruv-on-color);
+        --buttonCounter-danger-fgColor-disabled: var(--gruv-gray);
+
+        /* button keybinding hints */
+        --buttonKeybindingHint-default-bgColor-rest: var(--gruv-bg0_s);
+        --buttonKeybindingHint-default-borderColor-rest: var(--gruv-bg2);
+        --buttonKeybindingHint-default-fgColor-rest: var(--gruv-fg4);
+        --buttonKeybindingHint-inactive-bgColor: var(--gruv-bg0_s);
+        --buttonKeybindingHint-inactive-borderColor: var(--gruv-bg1);
+        --buttonKeybindingHint-inactive-fgColor: var(--gruv-gray);
+
+        /* card / menu / tooltip / skeleton / avatar */
+        --card-bgColor: var(--gruv-bg0_s);
+        --menu-bgColor-active: var(--gruv-bg1);
+        --tooltip-bgColor: var(--gruv-fg1);
+        --tooltip-fgColor: var(--gruv-bg0);
+        --skeletonLoader-bgColor: var(--gruv-bg1);
+        --avatar-bgColor: var(--gruv-bg0_s);
+        --avatar-borderColor: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --avatarStack-fade-bgColor-default: var(--gruv-bg2);
+        --avatarStack-fade-bgColor-muted: var(--gruv-bg1);
+
+        /* progress bar */
+        --progressBar-track-bgColor: var(--gruv-bg1);
+        --progressBar-track-borderColor: transparent;
+        --progressBar-bgColor-accent: var(--gruv-blue-light);
+        --progressBar-bgColor-success: var(--gruv-green-light);
+        --progressBar-bgColor-attention: var(--gruv-yellow-light);
+        --progressBar-bgColor-severe: var(--gruv-orange-light);
+        --progressBar-bgColor-danger: var(--gruv-red-light);
+        --progressBar-bgColor-done: var(--gruv-purple-light);
+        --progressBar-bgColor-sponsors: var(--gruv-purple-light);
+        --progressBar-bgColor-neutral: var(--gruv-gray);
+
+        /* reaction button */
+        --reactionButton-selected-bgColor-rest: color-mix(in srgb, var(--gruv-blue-light) 15%, transparent);
+        --reactionButton-selected-bgColor-hover: color-mix(in srgb, var(--gruv-blue-light) 25%, transparent);
+        --reactionButton-selected-fgColor-rest: var(--gruv-blue-light);
+        --reactionButton-selected-fgColor-hover: var(--gruv-blue-light);
+
         /* diff */
         --diffBlob-additionLine-bgColor: var(--gruv-bg-diff-green);
         --diffBlob-additionLine-fgColor: var(--gruv-fg1);
@@ -319,7 +412,7 @@
         --diffBlob-hunkNum-bgColor-rest: var(--gruv-bg-visual-blue);
         --diffBlob-hunkNum-bgColor-hover: var(--gruv-blue-dark);
         --diffBlob-hunkNum-fgColor-rest: var(--gruv-fg2);
-        --diffBlob-hunkNum-fgColor-hover: var(--gruv-fg0);
+        --diffBlob-hunkNum-fgColor-hover: var(--gruv-on-emphasis);
         --diffBlob-emptyLine-bgColor: var(--gruv-bg0_s);
         --diffBlob-emptyNum-bgColor: var(--gruv-bg0_s);
         --diffBlob-expander-iconColor: var(--gruv-fg4);
@@ -498,6 +591,11 @@
 
     .blob-num {
         color: var(--gruv-bg3);
+    }
+
+    /* diff hunk / expander row hover ( refined-github ): `.color-fg-muted` text and icon follow the row hover colour */
+    .rgh-extend-diff-expander .diff-line-row:has(button[data-direction]):hover :is(.diff-text-inner, button) {
+        color: inherit !important;
     }
 
     .blob-num:hover {
