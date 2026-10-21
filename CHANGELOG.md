@@ -1,3 +1,15 @@
+## [3.2.2](https://github.com/marslo/github-gruvbox/compare/v3.2.1...v3.2.2) (2026-10-21)
+
+### Bug Fixes
+
+* **style**: use blue accent for selected subnav item ([49e0373](https://github.com/marslo/github-gruvbox/commit/49e03731f5c3f1ca86477f3d1bb7998d6b80561c))
+  - set `--bgColor-accent-emphasis` and `--borderColor-accent-emphasis` to `--gruv-blue-dark` on selected `.subnav-item` ( Releases / Tags / Changelog ) in both styles
+
+### Others
+
+* **meta**: rename retro style to `Github GruvBox Redux` and update authorship ([524a80c](https://github.com/marslo/github-gruvbox/commit/524a80c5bd23a4365979f7f0d588926d4fb3d101))
+  - rename the retro style to `Github GruvBox Redux`
+
 ## [3.2.1](https://github.com/marslo/github-gruvbox/compare/v3.2.0...v3.2.1) (2026-10-21)
 
 ### Bug Fixes
