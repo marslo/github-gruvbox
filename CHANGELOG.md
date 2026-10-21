@@ -1,3 +1,14 @@
+## [3.2.0](https://github.com/marslo/github-gruvbox/compare/v3.1.1...v3.2.0) (2026-10-21)
+
+### Features
+
+* **theme**, **release**: split into classic gruvbox and gruvbox-material userstyles with a switchable `Palette` option for dark/light and hard/medium/soft ([f1566a6](https://github.com/marslo/github-gruvbox/commit/f1566a674aaca91a635ace6bc881f85e38de68e0))
+  - restore classic gruvbox colors in `github-gruvbox.user.css` with `Dark` / `Light` options
+  - add `github-gruvbox-material.user.css` with dark/light × hard/medium/soft options
+  - switch palettes via `@var select palette` and the `uso` preprocessor
+  - add scheme-aware roles for `color-scheme` and text on colored backgrounds
+  - bump `@version` in both userstyles on release and document them in the README
+
 ## [3.1.1](https://github.com/marslo/github-gruvbox/compare/v3.1.0...v3.1.1) (2026-10-21)
 
 ### Bug Fixes
