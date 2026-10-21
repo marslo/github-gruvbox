@@ -91,8 +91,8 @@ function detectChangelogTitle(file) {
 }
 const CHANGELOG_TITLE = detectChangelogTitle(CHANGELOG_FILE);
 
-// userstyle whose `@version` header is bumped on release
-const USERSTYLE_FILE = 'github-gruvbox.user.css';
+// userstyles whose `@version` header is bumped on release
+const USERSTYLE_FILES = [ 'github-gruvbox.user.css', 'github-gruvbox-material.user.css' ];
 
 module.exports = {
   "branches": ["main"],
@@ -185,13 +185,13 @@ module.exports = {
     )],
     ["@semantic-release/exec", {
       "prepareCmd": [
-        "sed -i 's/@version.*/@version        ${nextRelease.version}/' " + USERSTYLE_FILE,
+        "sed -i 's/@version.*/@version        ${nextRelease.version}/' " + USERSTYLE_FILES.join(' '),
         // `|| true` keeps the release going when a hook rewrites a file and exits non-zero
-        "pre-commit run --files " + CHANGELOG_FILE + " " + USERSTYLE_FILE + " || true"
+        "pre-commit run --files " + [ CHANGELOG_FILE, ...USERSTYLE_FILES ].join(' ') + " || true"
       ].join(' && ')
     }],
     ["@semantic-release/git", {
-      "assets": [ CHANGELOG_FILE, USERSTYLE_FILE ],
+      "assets": [ CHANGELOG_FILE, ...USERSTYLE_FILES ],
       "message": "chore(release): v${nextRelease.version}"
     }],
     "@semantic-release/github"

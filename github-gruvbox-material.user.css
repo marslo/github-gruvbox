@@ -1,0 +1,499 @@
+/* ==UserStyle==
+@name           Github GruvBox Material
+@namespace      github.com
+@version        3.1.1
+@description    A gruvbox-material ( dark / light × hard / medium / soft ) theme for GitHub.
+@author         Sam McGowan
+@maintainer     Marslo Jiao
+@homepageURL    https://github.com/marslo/github-gruvbox
+@updateURL      https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox-material.user.css
+@preprocessor   uso
+@var select     palette "Palette" {
+  "Dark Hard*": "html:root { --gruv-palette: dark-hard; }",
+  "Dark Medium": "html:root { --gruv-palette: dark-medium; --gruv-bg0_h: #1b1b1b; --gruv-bg0_s: #32302f; --gruv-bg0: #282828; --gruv-bg1: #45403d; --gruv-bg2: #5a524c; --gruv-bg3: #665c54; --gruv-bg-diff-red: #402120; --gruv-bg-diff-green: #34381b; --gruv-bg-diff-blue: #0e363e; --gruv-bg-visual-red: #4c3432; --gruv-bg-visual-green: #3b4439; --gruv-bg-visual-blue: #374141; }",
+  "Dark Soft": "html:root { --gruv-palette: dark-soft; --gruv-bg0_h: #252423; --gruv-bg0_s: #3c3836; --gruv-bg0: #32302f; --gruv-bg1: #504945; --gruv-bg2: #665c54; --gruv-bg3: color-mix(in srgb, #665c54 50%, #7c6f64); --gruv-bg-diff-red: #472322; --gruv-bg-diff-green: #3d4220; --gruv-bg-diff-blue: #0f3a42; --gruv-bg-visual-red: #543937; --gruv-bg-visual-green: #424a3e; --gruv-bg-visual-blue: #404946; }",
+  "Light Hard": "html:root { --gruv-palette: light-hard; --gruv-scheme: light; --gruv-shade: var(--gruv-fg1); --gruv-on-color: var(--gruv-bg0); --gruv-on-emphasis: var(--gruv-bg0); --gruv-ink: var(--gruv-fg0); --gruv-bg0_h: #f3eac7; --gruv-bg0_s: #f5edca; --gruv-bg0: #f9f5d7; --gruv-bg1: #f2e5bc; --gruv-bg2: #ebdbb2; --gruv-bg3: color-mix(in srgb, #ebdbb2 50%, #a89984); --gruv-bg-diff-red: #f8e4c9; --gruv-bg-diff-green: #e4edc8; --gruv-bg-diff-blue: #e0e9d3; --gruv-bg-visual-red: #f0ddc3; --gruv-bg-visual-green: #dde5c2; --gruv-bg-visual-blue: #d9e1cc; --gruv-bg4: #a89984; --gruv-fg0: #4f3829; --gruv-fg1: #654735; --gruv-fg2: #654735; --gruv-fg3: #7c6f64; --gruv-fg4: #7c6f64; --gruv-gray: #928374; --gruv-red-light: #c14a4a; --gruv-orange-light: #c35e0a; --gruv-yellow-light: #b47109; --gruv-green-light: #6c782e; --gruv-aqua-light: #4c7a5d; --gruv-blue-light: #45707a; --gruv-purple-light: #945e80; }",
+  "Light Medium": "html:root { --gruv-palette: light-medium; --gruv-scheme: light; --gruv-shade: var(--gruv-fg1); --gruv-on-color: var(--gruv-bg0); --gruv-on-emphasis: var(--gruv-bg0); --gruv-ink: var(--gruv-fg0); --gruv-bg0_h: #f2e5bc; --gruv-bg0_s: #f4e8be; --gruv-bg0: #fbf1c7; --gruv-bg1: #eee0b7; --gruv-bg2: #ddccab; --gruv-bg3: color-mix(in srgb, #ddccab 50%, #a89984); --gruv-bg-diff-red: #f9e0bb; --gruv-bg-diff-green: #e6eabc; --gruv-bg-diff-blue: #e2e6c7; --gruv-bg-visual-red: #f1d9b5; --gruv-bg-visual-green: #dee2b6; --gruv-bg-visual-blue: #dadec0; --gruv-bg4: #a89984; --gruv-fg0: #4f3829; --gruv-fg1: #654735; --gruv-fg2: #654735; --gruv-fg3: #7c6f64; --gruv-fg4: #7c6f64; --gruv-gray: #928374; --gruv-red-light: #c14a4a; --gruv-orange-light: #c35e0a; --gruv-yellow-light: #b47109; --gruv-green-light: #6c782e; --gruv-aqua-light: #4c7a5d; --gruv-blue-light: #45707a; --gruv-purple-light: #945e80; }",
+  "Light Soft": "html:root { --gruv-palette: light-soft; --gruv-scheme: light; --gruv-shade: var(--gruv-fg1); --gruv-on-color: var(--gruv-bg0); --gruv-on-emphasis: var(--gruv-bg0); --gruv-ink: var(--gruv-fg0); --gruv-bg0_h: #ebdbb2; --gruv-bg0_s: #eddeb5; --gruv-bg0: #f2e5bc; --gruv-bg1: #e6d5ae; --gruv-bg2: #d5c4a1; --gruv-bg3: color-mix(in srgb, #d5c4a1 50%, #a89984); --gruv-bg-diff-red: #f7d9b9; --gruv-bg-diff-green: #dfe1b4; --gruv-bg-diff-blue: #dbddbf; --gruv-bg-visual-red: #efd2b3; --gruv-bg-visual-green: #d7d9ae; --gruv-bg-visual-blue: #d3d5b8; --gruv-bg4: #a89984; --gruv-fg0: #4f3829; --gruv-fg1: #654735; --gruv-fg2: #654735; --gruv-fg3: #7c6f64; --gruv-fg4: #7c6f64; --gruv-gray: #928374; --gruv-red-light: #c14a4a; --gruv-orange-light: #c35e0a; --gruv-yellow-light: #b47109; --gruv-green-light: #6c782e; --gruv-aqua-light: #4c7a5d; --gruv-blue-light: #45707a; --gruv-purple-light: #945e80; }"
+}
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+
+    /*
+     * gruvbox-material colours, foreground `material`: `dark` + `hard` below; other modes / contrasts via `@var select palette`
+     * source: https://github.com/sainnhe/gruvbox-material/blob/master/autoload/gruvbox_material.vim
+     */
+    :root {
+        --gruv-bg0_h: #141617;                  /* bg_dim */
+        --gruv-bg0_s: #282828;                  /* bg1 / bg2 */
+
+        --gruv-bg0: #1d2021;                    /* bg0 */
+        --gruv-bg1: #3c3836;                    /* bg3 / bg4 */
+        --gruv-bg2: #504945;                    /* bg5 */
+        --gruv-bg3: #665c54;                    /* between bg5 and grey0 */
+        --gruv-bg4: #7c6f64;                    /* grey0 */
+
+        --gruv-fg0: #ddc7a1;                    /* fg1 */
+        --gruv-fg1: #d4be98;                    /* fg0 */
+        --gruv-fg2: #d4be98;                    /* fg0 */
+        --gruv-fg3: #a89984;                    /* grey2 */
+        --gruv-fg4: #a89984;                    /* grey2 */
+
+        --gruv-gray: #928374;                   /* grey1 */
+
+        /* scheme-dependent roles; overridden by light palettes */
+        --gruv-scheme: dark;
+        --gruv-shade: var(--gruv-bg0);           /* mix base for `-dark` variants */
+        --gruv-on-color: var(--gruv-fg0);        /* text on saturated backgrounds */
+        --gruv-on-emphasis: var(--gruv-bg0_h);   /* text on emphasis backgrounds */
+        --gruv-ink: var(--gruv-bg0_h);           /* `black` tokens */
+
+        /* diff / visual backgrounds */
+        --gruv-bg-diff-red: #3c1f1e;            /* bg_diff_red */
+        --gruv-bg-diff-green: #32361a;          /* bg_diff_green */
+        --gruv-bg-diff-blue: #0d3138;           /* bg_diff_blue */
+        --gruv-bg-visual-red: #442e2d;          /* bg_visual_red */
+        --gruv-bg-visual-green: #333e34;        /* bg_visual_green */
+        --gruv-bg-visual-blue: #2e3b3b;         /* bg_visual_blue */
+
+        /* `-light` = palette hue; `-dark` = hue mixed 80% with bg0 */
+        --gruv-red-light: #ea6962;
+        --gruv-red-dark: color-mix(in srgb, var(--gruv-red-light) 80%, var(--gruv-shade));
+
+        --gruv-orange-light: #e78a4e;
+        --gruv-orange-dark: color-mix(in srgb, var(--gruv-orange-light) 80%, var(--gruv-shade));
+
+        --gruv-yellow-light: #d8a657;
+        --gruv-yellow-dark: color-mix(in srgb, var(--gruv-yellow-light) 80%, var(--gruv-shade));
+
+        --gruv-green-light: #a9b665;
+        --gruv-green-dark: color-mix(in srgb, var(--gruv-green-light) 80%, var(--gruv-shade));
+
+        --gruv-aqua-light: #89b482;
+        --gruv-aqua-dark: color-mix(in srgb, var(--gruv-aqua-light) 80%, var(--gruv-shade));
+
+        --gruv-blue-light: #7daea3;
+        --gruv-blue-dark: color-mix(in srgb, var(--gruv-blue-light) 80%, var(--gruv-shade));
+
+        --gruv-purple-light: #d3869b;
+        --gruv-purple-dark: color-mix(in srgb, var(--gruv-purple-light) 80%, var(--gruv-shade));
+    }
+
+    /* palette override: replaced by the `palette` option ( Stylus `uso` preprocessor ) */
+    /*[[palette]]*/
+
+    /* General */
+    html {
+        background-color: var(--gruv-bg0) !important;
+    }
+
+    /*
+     * primer theme tokens: defined on <html> and nested [data-color-mode] elements with selectors up to (0,3,0)
+     * :not(#_gruvbox) lifts specificity to (1,1,0) so the override wins on every theme root
+     */
+    :is(:root, [data-color-mode]):not(#_gruvbox) {
+        color-scheme: var(--gruv-scheme);
+
+        /* background */
+        --bgColor-default: var(--gruv-bg0);
+        --bgColor-muted: var(--gruv-bg0_s);
+        --bgColor-inset: var(--gruv-bg0_h);
+        --bgColor-emphasis: var(--gruv-bg3);
+        --bgColor-inverse: var(--gruv-fg1);
+        --bgColor-disabled: var(--gruv-bg1);
+        --bgColor-black: var(--gruv-ink);
+        --bgColor-white: var(--gruv-on-color);
+        --bgColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --bgColor-neutral-emphasis: var(--gruv-gray);
+        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 12%, transparent);
+        --bgColor-accent-emphasis: var(--gruv-bg4);
+        --bgColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
+        --bgColor-success-emphasis: var(--gruv-green-dark);
+        --bgColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
+        --bgColor-open-emphasis: var(--gruv-green-dark);
+        --bgColor-attention-muted: color-mix(in srgb, var(--gruv-yellow-light) 15%, transparent);
+        --bgColor-attention-emphasis: var(--gruv-yellow-dark);
+        --bgColor-severe-muted: color-mix(in srgb, var(--gruv-orange-light) 15%, transparent);
+        --bgColor-severe-emphasis: var(--gruv-orange-dark);
+        --bgColor-danger-muted: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
+        --bgColor-danger-emphasis: var(--gruv-red-dark);
+        --bgColor-closed-muted: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
+        --bgColor-closed-emphasis: var(--gruv-red-dark);
+        --bgColor-done-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
+        --bgColor-done-emphasis: var(--gruv-purple-dark);
+        --bgColor-sponsors-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
+        --bgColor-sponsors-emphasis: var(--gruv-purple-dark);
+        --bgColor-upsell-muted: color-mix(in srgb, var(--gruv-purple-light) 15%, transparent);
+        --bgColor-upsell-emphasis: var(--gruv-purple-dark);
+        --bgColor-draft-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --bgColor-draft-emphasis: var(--gruv-gray);
+
+        /* foreground */
+        --fgColor-default: var(--gruv-fg1);
+        --fgColor-muted: var(--gruv-fg4);
+        --fgColor-disabled: var(--gruv-gray);
+        --fgColor-onEmphasis: var(--gruv-on-emphasis);
+        --fgColor-onInverse: var(--gruv-bg0);
+        --fgColor-white: var(--gruv-on-color);
+        --fgColor-black: var(--gruv-ink);
+        --fgColor-neutral: var(--gruv-fg4);
+        --fgColor-accent: var(--gruv-aqua-light);
+        --fgColor-link: var(--gruv-aqua-light);
+        --fgColor-success: var(--gruv-green-light);
+        --fgColor-open: var(--gruv-green-light);
+        --fgColor-attention: var(--gruv-yellow-light);
+        --fgColor-severe: var(--gruv-orange-light);
+        --fgColor-danger: var(--gruv-red-light);
+        --fgColor-closed: var(--gruv-red-light);
+        --fgColor-done: var(--gruv-purple-light);
+        --fgColor-sponsors: var(--gruv-purple-light);
+        --fgColor-upsell: var(--gruv-purple-light);
+        --fgColor-draft: var(--gruv-gray);
+
+        /* border */
+        --borderColor-default: var(--gruv-bg1);
+        --borderColor-muted: var(--gruv-bg0_s);
+        --borderColor-emphasis: var(--gruv-bg3);
+        --borderColor-disabled: var(--gruv-bg1);
+        --borderColor-translucent: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --borderColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 30%, transparent);
+        --borderColor-neutral-emphasis: var(--gruv-gray);
+        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 40%, transparent);
+        --borderColor-accent-emphasis: var(--gruv-aqua-dark);
+        --borderColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
+        --borderColor-success-emphasis: var(--gruv-green-dark);
+        --borderColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
+        --borderColor-open-emphasis: var(--gruv-green-dark);
+        --borderColor-attention-muted: color-mix(in srgb, var(--gruv-yellow-light) 40%, transparent);
+        --borderColor-attention-emphasis: var(--gruv-yellow-dark);
+        --borderColor-severe-muted: color-mix(in srgb, var(--gruv-orange-light) 40%, transparent);
+        --borderColor-severe-emphasis: var(--gruv-orange-dark);
+        --borderColor-danger-muted: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
+        --borderColor-danger-emphasis: var(--gruv-red-dark);
+        --borderColor-closed-muted: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
+        --borderColor-closed-emphasis: var(--gruv-red-dark);
+        --borderColor-done-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
+        --borderColor-done-emphasis: var(--gruv-purple-dark);
+        --borderColor-sponsors-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
+        --borderColor-sponsors-emphasis: var(--gruv-purple-dark);
+        --borderColor-upsell-muted: color-mix(in srgb, var(--gruv-purple-light) 40%, transparent);
+        --borderColor-upsell-emphasis: var(--gruv-purple-dark);
+        --borderColor-draft-muted: color-mix(in srgb, var(--gruv-gray) 40%, transparent);
+        --borderColor-draft-emphasis: var(--gruv-gray);
+
+        /* focus */
+        --focus-outlineColor: var(--gruv-blue-light);
+        --focus-outline-color: var(--gruv-blue-light);
+
+        /* header */
+        --header-bgColor: var(--gruv-bg0_h);
+        --header-borderColor-divider: var(--gruv-bg1);
+        --header-fgColor-default: var(--gruv-red-light);
+        --header-fgColor-logo: var(--gruv-fg2);
+        --headerSearch-bgColor: var(--gruv-bg0);
+        --headerSearch-borderColor: var(--gruv-bg1);
+        --page-header-bgColor: var(--gruv-bg0);
+
+        /* overlay / menu */
+        --overlay-bgColor: var(--gruv-bg0_s);
+        --overlay-borderColor: var(--gruv-bg2);
+        --overlay-backdrop-bgColor: color-mix(in srgb, var(--gruv-bg0_h) 60%, transparent);
+        --selectMenu-bgColor-active: var(--gruv-bg2);
+        --selectMenu-borderColor: var(--gruv-bg1);
+        --sideNav-bgColor-selected: var(--gruv-bg1);
+        --timelineBadge-bgColor: var(--gruv-bg1);
+        --topicTag-borderColor: transparent;
+        --treeViewItem-leadingVisual-iconColor-rest: var(--gruv-aqua-dark);
+        --underlineNav-borderColor-active: var(--gruv-orange-light);
+        --underlineNav-borderColor-hover: var(--gruv-bg2);
+        --underlineNav-iconColor-rest: var(--gruv-fg4);
+
+        /* control (inputs, checkboxes, toggles) */
+        --control-bgColor-rest: var(--gruv-bg1);
+        --control-bgColor-hover: var(--gruv-bg2);
+        --control-bgColor-active: var(--gruv-bg1);
+        --control-bgColor-selected: var(--gruv-bg2);
+        --control-bgColor-disabled: var(--gruv-bg0_s);
+        --control-borderColor-rest: var(--gruv-bg2);
+        --control-borderColor-emphasis: var(--gruv-bg3);
+        --control-borderColor-selected: var(--gruv-purple-dark);
+        --control-borderColor-disabled: var(--gruv-bg1);
+        --control-borderColor-danger: var(--gruv-red-dark);
+        --control-borderColor-success: var(--gruv-green-dark);
+        --control-borderColor-warning: var(--gruv-yellow-dark);
+        --control-fgColor-rest: var(--gruv-fg2);
+        --control-fgColor-placeholder: var(--gruv-gray);
+        --control-fgColor-disabled: var(--gruv-gray);
+        --control-iconColor-rest: var(--gruv-fg4);
+        --control-transparent-bgColor-hover: color-mix(in srgb, var(--gruv-gray) 15%, transparent);
+        --control-transparent-bgColor-active: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --control-transparent-bgColor-selected: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+        --control-checked-bgColor-rest: var(--gruv-purple-dark);
+        --control-checked-bgColor-hover: var(--gruv-purple-light);
+        --control-checked-bgColor-active: var(--gruv-purple-dark);
+        --control-checked-borderColor-rest: var(--gruv-purple-dark);
+        --control-checked-borderColor-hover: var(--gruv-purple-light);
+        --control-checked-borderColor-active: var(--gruv-purple-dark);
+        --control-checked-fgColor-rest: var(--gruv-on-emphasis);
+        --controlKnob-bgColor-rest: var(--gruv-bg0);
+        --controlKnob-borderColor-rest: var(--gruv-bg3);
+        --controlKnob-borderColor-checked: var(--gruv-purple-dark);
+        --controlTrack-bgColor-rest: var(--gruv-bg1);
+        --controlTrack-bgColor-hover: var(--gruv-bg2);
+        --controlTrack-borderColor-rest: var(--gruv-bg2);
+
+        /* button: default */
+        --button-default-fgColor-rest: var(--gruv-fg2);
+        --button-default-bgColor-rest: var(--gruv-bg1);
+        --button-default-bgColor-hover: var(--gruv-bg2);
+        --button-default-bgColor-active: var(--gruv-bg1);
+        --button-default-bgColor-selected: var(--gruv-bg2);
+        --button-default-bgColor-disabled: var(--gruv-bg0_s);
+        --button-default-borderColor-rest: var(--gruv-bg2);
+        --button-default-borderColor-hover: var(--gruv-bg3);
+        --button-default-borderColor-active: var(--gruv-bg2);
+        --button-default-borderColor-disabled: var(--gruv-bg1);
+        --button-default-shadow-resting: none;
+
+        /* button: primary */
+        --button-primary-fgColor-rest: var(--gruv-on-color);
+        --button-primary-iconColor-rest: var(--gruv-on-color);
+        --button-primary-bgColor-rest: var(--gruv-purple-dark);
+        --button-primary-bgColor-hover: var(--gruv-purple-light);
+        --button-primary-bgColor-active: var(--gruv-purple-dark);
+        --button-primary-bgColor-disabled: color-mix(in srgb, var(--gruv-purple-dark) 50%, transparent);
+        --button-primary-borderColor-rest: var(--gruv-purple-dark);
+        --button-primary-borderColor-hover: var(--gruv-purple-light);
+        --button-primary-borderColor-active: var(--gruv-purple-dark);
+        --button-primary-borderColor-disabled: transparent;
+
+        /* button: outline */
+        --button-outline-fgColor-rest: var(--gruv-green-dark);
+        --button-outline-fgColor-hover: var(--gruv-green-light);
+        --button-outline-fgColor-active: var(--gruv-green-light);
+        --button-outline-bgColor-rest: var(--gruv-bg1);
+        --button-outline-bgColor-hover: var(--gruv-bg2);
+        --button-outline-bgColor-active: var(--gruv-bg1);
+        --button-outline-borderColor-hover: var(--gruv-bg3);
+        --button-outline-borderColor-active: var(--gruv-bg3);
+
+        /* button: danger */
+        --button-danger-fgColor-rest: var(--gruv-red-light);
+        --button-danger-iconColor-rest: var(--gruv-red-light);
+        --button-danger-bgColor-rest: var(--gruv-bg1);
+        --button-danger-borderColor-rest: var(--gruv-bg2);
+        --button-danger-fgColor-hover: var(--gruv-on-color);
+        --button-danger-iconColor-hover: var(--gruv-on-color);
+        --button-danger-bgColor-hover: var(--gruv-red-dark);
+        --button-danger-borderColor-hover: var(--gruv-red-dark);
+        --button-danger-fgColor-active: var(--gruv-on-color);
+        --button-danger-bgColor-active: var(--gruv-red-dark);
+        --button-danger-borderColor-active: var(--gruv-red-dark);
+
+        /* button: invisible */
+        --button-invisible-fgColor-rest: var(--gruv-fg2);
+        --button-invisible-fgColor-hover: var(--gruv-fg1);
+        --button-invisible-iconColor-rest: var(--gruv-fg4);
+        --button-invisible-iconColor-hover: var(--gruv-fg2);
+        --button-invisible-bgColor-hover: color-mix(in srgb, var(--gruv-gray) 15%, transparent);
+        --button-invisible-bgColor-active: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
+
+        --button-star-iconColor: var(--gruv-yellow-light);
+        --buttonCounter-default-bgColor-rest: var(--gruv-bg0_s);
+        --counter-bgColor-muted: var(--gruv-bg2);
+        --counter-bgColor-emphasis: var(--gruv-gray);
+        --counter-borderColor: transparent;
+
+        /* diff */
+        --diffBlob-additionLine-bgColor: var(--gruv-bg-diff-green);
+        --diffBlob-additionLine-fgColor: var(--gruv-fg1);
+        --diffBlob-additionNum-bgColor: var(--gruv-bg-visual-green);
+        --diffBlob-additionNum-fgColor: var(--gruv-fg1);
+        --diffBlob-additionWord-bgColor: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
+        --diffBlob-additionWord-fgColor: var(--gruv-fg0);
+        --diffBlob-deletionLine-bgColor: var(--gruv-bg-diff-red);
+        --diffBlob-deletionLine-fgColor: var(--gruv-fg1);
+        --diffBlob-deletionNum-bgColor: var(--gruv-bg-visual-red);
+        --diffBlob-deletionNum-fgColor: var(--gruv-fg1);
+        --diffBlob-deletionWord-bgColor: color-mix(in srgb, var(--gruv-red-light) 40%, transparent);
+        --diffBlob-deletionWord-fgColor: var(--gruv-fg0);
+        --diffBlob-hunkLine-bgColor: var(--gruv-bg-diff-blue);
+        --diffBlob-hunkLine-fgColor: var(--gruv-fg4);
+        --diffBlob-hunkNum-bgColor-rest: var(--gruv-bg-visual-blue);
+        --diffBlob-hunkNum-bgColor-hover: var(--gruv-blue-dark);
+        --diffBlob-hunkNum-fgColor-rest: var(--gruv-fg2);
+        --diffBlob-hunkNum-fgColor-hover: var(--gruv-fg0);
+        --diffBlob-emptyLine-bgColor: var(--gruv-bg0_s);
+        --diffBlob-emptyNum-bgColor: var(--gruv-bg0_s);
+        --diffBlob-expander-iconColor: var(--gruv-fg4);
+
+        /* contribution graph */
+        --contribution-default-bgColor-0: var(--gruv-bg1);
+        --contribution-default-bgColor-1: color-mix(in srgb, var(--gruv-green-light) 30%, transparent);
+        --contribution-default-bgColor-2: color-mix(in srgb, var(--gruv-green-light) 55%, transparent);
+        --contribution-default-bgColor-3: color-mix(in srgb, var(--gruv-green-light) 80%, transparent);
+        --contribution-default-bgColor-4: var(--gruv-green-light);
+        --contribution-default-borderColor-0: transparent;
+
+        /* syntax highlighting (when viewing) */
+        --color-prettylights-syntax-comment: var(--gruv-gray);
+        --color-prettylights-syntax-constant: var(--gruv-blue-light);
+        --color-prettylights-syntax-entity: var(--gruv-purple-light);
+        --color-prettylights-syntax-storage-modifier-import: var(--gruv-fg1);
+        --color-prettylights-syntax-entity-tag: var(--gruv-aqua-light);
+        --color-prettylights-syntax-keyword: var(--gruv-red-light);
+        --color-prettylights-syntax-string: var(--gruv-green-light);
+        --color-prettylights-syntax-variable: var(--gruv-yellow-light);
+        --color-prettylights-syntax-brackethighlighter-unmatched: var(--gruv-red-dark);
+        --color-prettylights-syntax-brackethighlighter-angle: var(--gruv-fg4);
+        --color-prettylights-syntax-invalid-illegal-text: var(--gruv-fg1);
+        --color-prettylights-syntax-invalid-illegal-bg: var(--gruv-red-dark);
+        --color-prettylights-syntax-carriage-return-text: var(--gruv-fg1);
+        --color-prettylights-syntax-carriage-return-bg: var(--gruv-red-dark);
+        --color-prettylights-syntax-string-regexp: var(--gruv-aqua-light);
+        --color-prettylights-syntax-markup-list: var(--gruv-yellow-light);
+        --color-prettylights-syntax-markup-heading: var(--gruv-blue-light);
+        --color-prettylights-syntax-markup-italic: var(--gruv-fg2);
+        --color-prettylights-syntax-markup-bold: var(--gruv-purple-light);
+        --color-prettylights-syntax-markup-deleted-text: var(--gruv-red-light);
+        --color-prettylights-syntax-markup-deleted-bg: color-mix(in srgb, var(--gruv-red-light) 15%, transparent);
+        --color-prettylights-syntax-markup-inserted-text: var(--gruv-green-light);
+        --color-prettylights-syntax-markup-inserted-bg: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
+        --color-prettylights-syntax-markup-changed-text: var(--gruv-orange-light);
+        --color-prettylights-syntax-markup-changed-bg: color-mix(in srgb, var(--gruv-orange-light) 15%, transparent);
+        --color-prettylights-syntax-markup-ignored-text: var(--gruv-fg2);
+        --color-prettylights-syntax-markup-ignored-bg: var(--gruv-blue-dark);
+        --color-prettylights-syntax-meta-diff-range: var(--gruv-purple-light);
+        --color-prettylights-syntax-constant-other-reference-link: var(--gruv-aqua-light);
+        --color-prettylights-syntax-sublimelinter-gutter-mark: var(--gruv-bg3);
+
+        /* syntax highlighting (when editing) */
+        --codeMirror-fgColor: var(--gruv-fg1);
+        --codeMirror-bgColor: var(--gruv-bg0);
+        --codeMirror-gutters-bgColor: var(--gruv-bg0);
+        --codeMirror-gutterMarker-fgColor-default: var(--gruv-bg0);
+        --codeMirror-gutterMarker-fgColor-muted: var(--gruv-bg3);
+        --codeMirror-lineNumber-fgColor: var(--gruv-bg3);
+        --codeMirror-cursor-fgColor: var(--gruv-fg1);
+        --codeMirror-selection-bgColor: var(--gruv-bg1);
+        --codeMirror-activeline-bgColor: var(--gruv-bg0_h);
+        --codeMirror-lines-bgColor: var(--gruv-bg0);
+        --codeMirror-matchingBracket-fgColor: var(--gruv-yellow-light);
+        --codeMirror-syntax-fgColor-comment: var(--gruv-gray);
+        --codeMirror-syntax-fgColor-constant: var(--gruv-blue-light);
+        --codeMirror-syntax-fgColor-entity: var(--gruv-purple-light);
+        --codeMirror-syntax-fgColor-keyword: var(--gruv-red-light);
+        --codeMirror-syntax-fgColor-storage: var(--gruv-red-light);
+        --codeMirror-syntax-fgColor-string: var(--gruv-green-light);
+        --codeMirror-syntax-fgColor-support: var(--gruv-aqua-light);
+        --codeMirror-syntax-fgColor-variable: var(--gruv-yellow-light);
+    }
+
+    /* legacy `--color-*` tokens (pre-2024 primer, still used by some github.com subdomains) */
+    body {
+        --color-canvas-default: var(--gruv-bg0);
+        --color-canvas-inset: var(--gruv-bg0_h);
+        --color-canvas-overlay: var(--gruv-bg0_s);
+        --color-canvas-subtle: var(--gruv-bg0_s);
+
+        --color-fg-default: var(--gruv-fg1);
+        --color-fg-muted: var(--gruv-fg4);
+        --color-fg-subtle: var(--gruv-aqua-dark);
+        --color-primer-fg-disabled: var(--gruv-gray);
+
+        --color-header-bg: var(--gruv-bg0_h);
+        --color-header-logo: var(--gruv-fg2);
+        --color-header-text: var(--gruv-red-light);
+        --color-header-search-bg: var(--gruv-bg0);
+        --color-header-search-border: var(--gruv-bg1);
+
+        --color-page-header-bg: var(--gruv-bg0);
+
+        --color-border-muted: var(--gruv-bg0_h);
+        --color-border-default: var(--gruv-bg0_s);
+
+        --color-btn-text: var(--gruv-fg2);
+        --color-btn-bg: var(--gruv-bg1);
+        --color-btn-hover-bg: var(--gruv-bg2);
+        --color-btn-active-bg: var(--gruv-bg1);
+        --color-btn-active-border: var(--gruv-bg2);
+        --color-btn-selected-bg: var(--gruv-bg2);
+        --color-btn-selected-border: var(--gruv-bg2);
+        --color-btn-focus-border: var(--gruv-bg3);
+
+        --color-btn-border: var(--gruv-bg2);
+        --color-btn-hover-border: var(--gruv-bg3);
+        --color-btn-primary-bg: var(--gruv-purple-dark);
+        --color-btn-primary-hover-bg: var(--gruv-purple-light);
+        --color-btn-primary-active-bg: var(--gruv-purple-dark);
+        --color-btn-primary-focus-bg: var(--gruv-purple-dark);
+        --color-btn-primary-selected-bg: var(--gruv-purple-dark);
+
+        --color-accent-fg: var(--gruv-aqua-light);
+        --color-accent-emphasis: var(--gruv-red-light);
+        --color-accent-subtle: var(--gruv-bg0_s);
+        --color-fg-on-emphasis: var(--gruv-on-emphasis);
+
+        --color-btn-counter-bg: var(--color-accent-subtle);
+
+        --color-btn-outline-text: var(--gruv-green-dark);
+        --color-btn-outline-hover-text: var(--gruv-green-light);
+        --color-btn-outline-hover-bg: var(--gruv-bg2);
+        --color-btn-outline-hover-border: var(--gruv-bg3);
+
+        --color-icon-directory: var(--color-fg-subtle);
+
+        --color-attention-subtle: var(--gruv-bg0_h);
+
+        --color-codemirror-text: var(--gruv-fg1);
+        --color-codemirror-bg: var(--color-canvas-default);
+        --color-codemirror-gutters-bg: var(--color-canvas-default);
+        --color-codemirror-guttermarker-text: var(--color-canvas-default);
+        --color-codemirror-guttermarker-subtle-text: var(--gruv-bg3);
+        --color-codemirror-linenumber-text: var(--gruv-bg3);
+        --color-codemirror-cursor: var(--gruv-fg1);
+        --color-codemirror-selection-bg: var(--gruv-bg1);
+        --color-codemirror-activeline-bg: var(--gruv-bg0_h);
+        --color-codemirror-lines-bg: var(--color-canvas-default);
+    }
+
+    /* More misc. stuff */
+    .breadcrumb strong.final-path {
+        color: var(--fgColor-muted);
+    }
+
+    .Link--primary:hover {
+        color: var(--gruv-fg0) !important;
+    }
+
+    .Link--secondary:hover {
+        color: var(--gruv-blue-dark) !important;
+    }
+
+    .Link--muted:hover {
+        color: var(--gruv-aqua-light) !important;
+    }
+
+    .feature-preview-indicator {
+        background: none;
+        background-color: var(--header-fgColor-default);
+    }
+
+    .SelectMenu-item {
+        border-bottom-color: var(--borderColor-default);
+    }
+
+    input[type="checkbox"] {
+        border-color: var(--gruv-bg2) !important;
+    }
+
+    .blob-num {
+        color: var(--gruv-bg3);
+    }
+
+    .blob-num:hover {
+        color: var(--fgColor-accent);
+    }
+
+}
