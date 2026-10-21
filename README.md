@@ -1,22 +1,84 @@
 # GitHub GruvBox
 
-![Screenshot](screenshot.png)
+[gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-material](https://github.com/sainnhe/gruvbox-material) themes for GitHub — dark / light palettes, switchable in Stylus.
 
-A GruvBox skin for GitHub.
+|                                  REPO<br>gruvbox-material (dark hard)                                 |                                  CODE<br>gruvbox-material (dark hard)                                 |                                  DIFF<br>gruvbox-material (light hard)                                |
+| :---------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+| [![](./screenshots/repo.png)](https://github.com/marslo/github-gruvbox/raw/main/screenshots/repo.png) | [![](./screenshots/code.png)](https://github.com/marslo/github-gruvbox/raw/main/screenshots/code.png) | [![](./screenshots/diff.png)](https://github.com/marslo/github-gruvbox/raw/main/screenshots/diff.png) |
 
-| style | palette | `Palette` options | install |
-|---|---|---|---|
-| `github-gruvbox.user.css` | [gruvbox](https://github.com/morhetz/gruvbox) | `Dark` ( default ), `Light` | [raw](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox.user.css) |
-| `github-gruvbox-material.user.css` | [gruvbox-material](https://github.com/sainnhe/gruvbox-material) | `Dark Hard` ( default ), `Dark Medium`, `Dark Soft`, `Light Hard`, `Light Medium`, `Light Soft` | [raw](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox-material.user.css) |
+## Installation
 
-Switch the palette in Stylus: style ⚙ ( Configure ) → `Palette`.
+1. install [Stylus](https://github.com/openstyles/stylus): [Chrome](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) | [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/) | [Edge](https://microsoftedge.microsoft.com/addons/detail/stylus/dmcfbglnmkadeibaoelljihicilhlnjd)
+2. click to install one of the styles:
+
+| style | palette | install |
+|---|---|---|
+| Github GruvBox Material | [gruvbox-material](https://github.com/sainnhe/gruvbox-material) | 📦 [github-gruvbox-material.user.css](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox-material.user.css) |
+| Github GruvBox | [gruvbox](https://github.com/morhetz/gruvbox) | 📦 [github-gruvbox.user.css](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox.user.css) |
 
 > [!NOTE]
 > Enable only one of them at a time — both override the same tokens.
 
+## Palettes
+
+Switch in Stylus: style ⚙ **Configure** → `Palette`.
+
+![](./screenshots/stylus.png)
+
+### Github GruvBox Material
+
+| `Palette` | background | foreground |
+|---|---|---|
+| `Dark Hard` ( default ) | `#1d2021` | `#d4be98` |
+| `Dark Medium` | `#282828` | `#d4be98` |
+| `Dark Soft` | `#32302f` | `#d4be98` |
+| `Light Hard` | `#f9f5d7` | `#654735` |
+| `Light Medium` | `#fbf1c7` | `#654735` |
+| `Light Soft` | `#f2e5bc` | `#654735` |
+
+### Github GruvBox
+
+| `Palette` | background | foreground |
+|---|---|---|
+| `Dark` ( default ) | `#282828` | `#ebdbb2` |
+| `Light` | `#fbf1c7` | `#3c3836` |
+
+## Features
+
+- recolors GitHub via its [Primer](https://primer.style/) design tokens: backgrounds, text, borders, buttons, inputs, overlays, diffs, contribution graph, code view, syntax highlighting
+- works with any GitHub appearance setting ( light / dark / soft dark / sync with system )
+- covers `github.com` and its subdomains ( e.g. `gist.github.com` )
+- accents:
+
+  | element | color |
+  |---|---|
+  | links | blue |
+  | secondary text | grey |
+  | topic tags | green |
+  | primary buttons | purple |
+
+## Development
+
+| file | description |
+|---|---|
+| `github-gruvbox.user.css` | classic gruvbox palette |
+| `github-gruvbox-material.user.css` | gruvbox-material palette |
+| `.releaserc.js` | semantic-release: bumps `@version` in both styles, updates `CHANGELOG.md` |
+| `.pre-commit-config.yaml` | stylelint, typos, whitespace checks |
+
+- both styles share everything below the palette block — edit them together, then check only the palette differs:
+
+  ```bash
+  diff github-gruvbox.user.css github-gruvbox-material.user.css
+  ```
+
+- palettes are `@var select palette` options expanded by the Stylus `uso` preprocessor into an `html:root { … }` override
+
 > [!IMPORTANT]
-> Option values must not contain `*/`: it closes the `==UserStyle==` metadata comment early.
+> Option values must not contain `*/` — it closes the `==UserStyle==` metadata comment early.
 
-Designed for use with userstyles.world and Stylus, but I assume it will work anywhere.
+## Credits
 
-The syntax highlighting isn't finished. I don't know if I'll get round to it tbh.
+- original [GitHub GruvBox](https://github.com/marslo/github-gruvbox/commit/8c228be0) style by Sam McGowan
+- palettes: [morhetz/gruvbox](https://github.com/morhetz/gruvbox), [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
+- [MIT License](./LICENSE)

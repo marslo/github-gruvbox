@@ -106,7 +106,7 @@
         --bgColor-white: var(--gruv-on-color);
         --bgColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --bgColor-neutral-emphasis: var(--gruv-gray);
-        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 12%, transparent);
+        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 12%, transparent);
         --bgColor-accent-emphasis: var(--gruv-bg4);
         --bgColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 15%, transparent);
         --bgColor-success-emphasis: var(--gruv-green-dark);
@@ -138,8 +138,8 @@
         --fgColor-white: var(--gruv-on-color);
         --fgColor-black: var(--gruv-ink);
         --fgColor-neutral: var(--gruv-fg4);
-        --fgColor-accent: var(--gruv-aqua-light);
-        --fgColor-link: var(--gruv-aqua-light);
+        --fgColor-accent: var(--gruv-blue-light);
+        --fgColor-link: var(--gruv-blue-light);
         --fgColor-success: var(--gruv-green-light);
         --fgColor-open: var(--gruv-green-light);
         --fgColor-attention: var(--gruv-yellow-light);
@@ -159,8 +159,8 @@
         --borderColor-translucent: color-mix(in srgb, var(--gruv-gray) 20%, transparent);
         --borderColor-neutral-muted: color-mix(in srgb, var(--gruv-gray) 30%, transparent);
         --borderColor-neutral-emphasis: var(--gruv-gray);
-        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-aqua-light) 40%, transparent);
-        --borderColor-accent-emphasis: var(--gruv-aqua-dark);
+        --borderColor-accent-muted: color-mix(in srgb, var(--gruv-blue-light) 40%, transparent);
+        --borderColor-accent-emphasis: var(--gruv-blue-dark);
         --borderColor-success-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
         --borderColor-success-emphasis: var(--gruv-green-dark);
         --borderColor-open-muted: color-mix(in srgb, var(--gruv-green-light) 40%, transparent);
@@ -430,7 +430,7 @@
         --color-btn-primary-focus-bg: var(--gruv-purple-dark);
         --color-btn-primary-selected-bg: var(--gruv-purple-dark);
 
-        --color-accent-fg: var(--gruv-aqua-light);
+        --color-accent-fg: var(--gruv-blue-light);
         --color-accent-emphasis: var(--gruv-red-light);
         --color-accent-subtle: var(--gruv-bg0_s);
         --color-fg-on-emphasis: var(--gruv-on-emphasis);
@@ -472,7 +472,19 @@
     }
 
     .Link--muted:hover {
-        color: var(--gruv-aqua-light) !important;
+        color: var(--gruv-blue-light) !important;
+    }
+
+    /* topic tags: green accent ( primer react `TopicTag` + legacy `.topic-tag` ) */
+    :is([class*="prc-TopicTag-TopicTag-"], .topic-tag) {
+        --fgColor-accent: var(--gruv-green-light);
+        --bgColor-accent-muted: color-mix(in srgb, var(--gruv-green-light) 12%, transparent);
+        --bgColor-accent-emphasis: var(--gruv-green-dark);
+    }
+
+    .topic-tag-link:hover {
+        color: var(--fgColor-onEmphasis);
+        background-color: var(--bgColor-accent-emphasis);
     }
 
     .feature-preview-indicator {
