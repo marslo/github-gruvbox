@@ -1,3 +1,23 @@
+## [3.2.1](https://github.com/marslo/github-gruvbox/compare/v3.2.0...v3.2.1) (2026-10-21)
+
+### Bug Fixes
+
+* **theme**, **diff**: map uncovered button, control, tooltip and progress tokens to the palette and keep hunk expander rows readable on hover ([04390bf](https://github.com/marslo/github-gruvbox/commit/04390bfd6dc512dbe2b754a8d9616bf668aeddbc))
+  - map inactive and disabled button tokens to the palette
+  - add button counter, keybinding hint, tooltip, card, menu and avatar colors
+  - map progress bar, reaction button and disabled control tokens
+  - use `--gruv-on-emphasis` for the hunk hover foreground
+  - let hunk expander text and icon inherit the row hover color
+
+### Code Refactoring
+
+* **theme**: recolor links and accent tints from aqua to blue and keep topic tags green ([fdb6b78](https://github.com/marslo/github-gruvbox/commit/fdb6b78256bf68216867e986523c7430b5e48b91))
+  - point `--fgColor-accent`, `--fgColor-link` and legacy `--color-accent-fg` at blue
+  - tint accent backgrounds and borders blue
+  - color `.Link--muted` hover blue
+  - scope a green accent onto primer react `TopicTag` and legacy `.topic-tag`
+  - replace the hardcoded light-blue `.topic-tag-link` hover background
+
 ## [3.2.0](https://github.com/marslo/github-gruvbox/compare/v3.1.1...v3.2.0) (2026-10-21)
 
 ### Features
