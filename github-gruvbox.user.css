@@ -575,6 +575,12 @@
         background-color: var(--bgColor-accent-emphasis);
     }
 
+    /* subnav selected item ( e.g. Releases / Tags / Changelog ): blue accent */
+    .subnav-item:is(.selected, [aria-selected="true"], [aria-current]:not([aria-current="false"])) {
+        --bgColor-accent-emphasis: var(--gruv-blue-dark);
+        --borderColor-accent-emphasis: var(--gruv-blue-dark);
+    }
+
     .feature-preview-indicator {
         background: none;
         background-color: var(--header-fgColor-default);
