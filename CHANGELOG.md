@@ -1,3 +1,9 @@
+## [3.1.1](https://github.com/marslo/github-gruvbox/compare/v3.1.0...v3.1.1) (2026-10-21)
+
+### Bug Fixes
+
+* **theme**: mute secondary text to grey and switch links and accent tints to aqua ([611ed42](https://github.com/marslo/github-gruvbox/commit/611ed4239fa2ba2bfc72d3cbbc2fbecce2c9258b))
+
 ## [3.1.0](https://github.com/marslo/github-gruvbox/compare/v3.0.0...v3.1.0) (2026-10-20)
 
 ### Features
