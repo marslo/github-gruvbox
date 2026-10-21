@@ -14,7 +14,7 @@
 | style | palette | install |
 |---|---|---|
 | Github GruvBox Material | [gruvbox-material](https://github.com/sainnhe/gruvbox-material) | 📦 [github-gruvbox-material.user.css](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox-material.user.css) |
-| Github GruvBox | [gruvbox](https://github.com/morhetz/gruvbox) | 📦 [github-gruvbox.user.css](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox.user.css) |
+| Github GruvBox Redux | [gruvbox](https://github.com/morhetz/gruvbox) | 📦 [github-gruvbox.user.css](https://github.com/marslo/github-gruvbox/raw/main/github-gruvbox.user.css) |
 
 > [!NOTE]
 > Enable only one of them at a time — both override the same tokens.
@@ -36,7 +36,7 @@ Switch in Stylus: style ⚙ **Configure** → `Palette`.
 | `Light Medium` | `#fbf1c7` | `#654735` |
 | `Light Soft` | `#f2e5bc` | `#654735` |
 
-### Github GruvBox
+### Github GruvBox Redux
 
 | `Palette` | background | foreground |
 |---|---|---|
@@ -79,6 +79,7 @@ Switch in Stylus: style ⚙ **Configure** → `Palette`.
 
 ## Credits
 
-- original [GitHub GruvBox](https://github.com/marslo/github-gruvbox/commit/8c228be0) style by Sam McGowan
+- `github-gruvbox.user.css` ( Redux ): based on the original [GitHub GruvBox](https://github.com/marslo/github-gruvbox/commit/8c228be0) by Sam McGowan, enhanced by Marslo Jiao
+- `github-gruvbox-material.user.css`: original work by Marslo Jiao
 - palettes: [morhetz/gruvbox](https://github.com/morhetz/gruvbox), [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
 - [MIT License](./LICENSE)
