@@ -276,8 +276,8 @@
         --button-default-shadow-resting: none;
 
         /* button: primary */
-        --button-primary-fgColor-rest: var(--gruv-on-color);
-        --button-primary-iconColor-rest: var(--gruv-on-color);
+        --button-primary-fgColor-rest: var(--gruv-on-emphasis);
+        --button-primary-iconColor-rest: var(--gruv-on-emphasis);
         --button-primary-bgColor-rest: var(--gruv-purple-dark);
         --button-primary-bgColor-hover: var(--gruv-purple-light);
         --button-primary-bgColor-active: var(--gruv-purple-dark);
@@ -328,8 +328,8 @@
         --button-inactive-bgColor: var(--gruv-bg0_s);
         --button-inactive-fgColor: var(--gruv-fg4);
         --button-default-fgColor-disabled: var(--gruv-gray);
-        --button-primary-fgColor-disabled: color-mix(in srgb, var(--gruv-on-color) 60%, transparent);
-        --button-primary-iconColor-disabled: color-mix(in srgb, var(--gruv-on-color) 60%, transparent);
+        --button-primary-fgColor-disabled: color-mix(in srgb, var(--gruv-on-emphasis) 60%, transparent);
+        --button-primary-iconColor-disabled: color-mix(in srgb, var(--gruv-on-emphasis) 60%, transparent);
         --button-danger-bgColor-disabled: var(--gruv-bg0_s);
         --button-danger-fgColor-disabled: color-mix(in srgb, var(--gruv-red-light) 50%, transparent);
         --button-danger-iconColor-disabled: color-mix(in srgb, var(--gruv-red-light) 50%, transparent);
